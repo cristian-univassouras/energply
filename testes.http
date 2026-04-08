@@ -1,0 +1,36 @@
+### Variáveis de Ambiente (Opcional no REST Client)
+@baseUrl = http://localhost:8000
+@id_da_leitura = 69d5a41a4f87421df50c9867
+
+### POST
+POST {{baseUrl}}/save_reading
+Content-Type: application/json
+
+{
+    "dia": "2026-10-24",
+    "horario_inicio": "06:00",
+    "horario_fim": "19:00",
+    "leitura_inicio": 3500.0,
+    "leitura_fim": 5500.0
+}
+
+### GET
+GET {{baseUrl}}/get_all_readings
+
+### GET ID
+GET {{baseUrl}}/get_reading_by_id/{{id_da_leitura}}
+
+### PUT
+PUT {{baseUrl}}/update_reading/{{id_da_leitura}}
+Content-Type: application/json
+
+{
+    "dia": "2027-10-24",
+    "horario_inicio": "07:00",
+    "horario_fim": "22:00",
+    "leitura_inicio": 6500.0,
+    "leitura_fim": 10500.0
+}
+
+### DELETE
+DELETE {{baseUrl}}/delete_reading/{{id_da_leitura}}
